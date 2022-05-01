@@ -10,10 +10,10 @@ const Dialogs = (props) => {
     let dialogsElements = props.state.dialogs.map(d => <DialogItem name={d.name} id={d.id}/>);
     let messagesElements = props.state.messages.map(m => <Message message={m.message}/>);
 
-    let newMessageElement = React.createRef();
-    let addMessage = () => {
-        let message = newMessageElement.current.value;
-        alert(message);
+    let newMessageElement = React.createRef(); /*создаём ссылку на элемент DOM*/
+    let addMessage = () => {                    /*создаём стрелочную функцию addMessage*/
+        let message = newMessageElement.current.value;      /*создаём переменную и передаем значение DOM через ссылку*/
+        alert(message);               /*отображаем в алерте*/
     }
 
     return (
